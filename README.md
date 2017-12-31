@@ -1,6 +1,6 @@
 # Ng-SoftNotify
 
- Soft Notifications component developed using Angular 5.0 to show silent notification like chat or status alerts to the user on screen without disturbing the current operation on screen.
+ Soft Notifications component developed using Angular 5.0 to show silent chat notification or alert notificataion to user on screen without disturbing the current operation on screen.
 
 ### Live Example
 
