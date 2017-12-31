@@ -19,7 +19,7 @@ Main Features
 ----------------
 +    Silent Notifications on screen without distubing content
 +    Multiple alert notifications available via configuration (Success, Error, Warning, Info)
-+    Chat Notifications can also be generated with lovely avatars (Iron Man, captain america, Ninja turle, etc.,)
++    Chat Notifications can also be generated with lovely avatars (Iron Man, captain america, Ninja turtle, etc.,)
 +    Auto dissmiss functionality with callback
 +    simple configuration
 
