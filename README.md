@@ -4,7 +4,7 @@
 
 ### Live Example
 
-[Ng-SoftNotification](https://github.com)
+[Ng-SoftNotification](https://dreamweiver.github.io/ng-softnotify/)
 
 
 ### Installing
@@ -29,7 +29,7 @@ How to use Ng-SoftNotify?
 ### Importing the SoftNotifyModule ###
 Import SoftNotifyModule in your app's module by placinng it in `imports` array.
 ```html
- import { SoftNotifyModule } from '&lt;relative path&gt;/softNotify/softNotify.module';
+ import { SoftNotifyModule } from '<relative path&gt>/softNotify/softNotify.module';
 
  ...
 
@@ -89,7 +89,7 @@ this.softNotifyService.launchNotification(this.notifications[0]); //lauching the
 
 ## Contributing
 
-Please read [CONTRIBUTING.md](https://github.com) for details on our code of conduct, and the process for submitting pull requests
+Please read [CONTRIBUTING.md](https://github.com/dreamweiver/ng-softnotify/blob/master/CONTRIBUTING.md) for details on our code of conduct, and the process for submitting pull requests
 
 ## Versioning
 
@@ -105,5 +105,5 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md
 
 ## Acknowledgments
 
-* Special thanks to [icon8](https://tympanus.net/codrops/2015/07/20/freebie-cinema-icon-set/) team for giving lovely icons 
+* Special thanks to [icon8](https://tympanus.net/codrops/2015/07/20/freebie-cinema-icon-set/) team for giving lovely avatars 
 
