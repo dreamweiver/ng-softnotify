@@ -1,0 +1,40 @@
+<main>
+ <div class="notification-cont">
+  <ng-container *ngFor="let notification of softNotifyService.notifications; last as islast">
+    <div class="notification repeated-item "  *ngIf = "!notification.__isExpired">
+      <ng-container *ngIf="notification.type === 'chat'">  
+        <div class="notification-header" [ngClass]="notification.status" (onInitNotification)="onInit(notification)" >
+          <div class="header-content">
+            <img class="notification-icon" src="./../../../assets/images/Captain America.svg" *ngIf = "notification.avatar==='captain-america'">
+            <img class="notification-icon" src="./../../../assets/images/Iron Man.svg" *ngIf = "notification.avatar ==='iron-man'">
+            <img class="notification-icon" src="./../../../assets/images/Martian.svg" *ngIf = "notification.avatar ==='martian'">
+            <img class="notification-icon" src="./../../../assets/images/Alien.svg" *ngIf = "notification.avatar ==='alien'">
+            <img class="notification-icon" src="./../../../assets/images/Predator.svg" *ngIf = "notification.avatar ==='predator'">
+            <img class="notification-icon" src="./../../../assets/images/Scream.svg" *ngIf = "notification.avatar ==='scream'">
+            <img class="notification-icon" src="./../../../assets/images/Ninja Turtle.svg" *ngIf = "notification.avatar ==='ninja-turtle'">
+            <img class="notification-icon" src="./../../../assets/images/Theatre Mask.svg" *ngIf = "notification.avatar ==='theatre-mask'">
+            <img class="notification-icon" src="./../../../assets/images/Astronaut.svg" *ngIf = "notification.avatar ==='astronaut'">
+            <span class="header-txt">{{notification.header}}</span>
+            <span class="sub-txt">{{notification.subHeader}}</span>
+            <span class="close-icon" (click)="onDismissNotification(notification)"> <img src="./../../../assets/images/close.svg"></span>
+          </div>
+        </div>
+        <div class="notification-body">
+          <div class="body-content">
+            <span>{{notification.body}}</span>
+            <div><span class="time-val">{{notification.time}}</span></div>
+          </div>
+        </div>
+      </ng-container>
+      <ng-container *ngIf="notification.type !== 'chat'" >
+          <div class="notification_type" [ngClass]="notification.type"></div>
+          <div class="notification_body">
+            <div class="notification_title" [ngClass]="notification.type">{{notification.header}}</div>
+            <div class="notification_desc">{{notification.body}}</div>    
+          </div>
+          <div class="notification_ctrls"><span class="close-icon" (click)="onDismissNotification(notification)"> <img src="./../../../assets/images/close.svg"></span></div>  
+      </ng-container>
+    </div>
+  </ng-container>
+  </div>
+</main>
