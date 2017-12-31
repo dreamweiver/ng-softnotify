@@ -4,7 +4,7 @@
 
 ### Live Example
 
-[Ng-SoftNotify](https://dreamweiver.github.io/ng-softnotify/dist/index.html)
+[Ng-SoftNotify](https://dreamweiver.github.io/ng-softnotify)
 
 
 ### Installing
