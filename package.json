@@ -9,6 +9,7 @@
   "scripts": {
     "start": "webpack-dev-server --inline --progress --port 3980",
     "test": "karma start",
+    "test": "karma start karma.conf.js --single-run",
     "build": "rimraf dist && webpack --config config/webpack.prod.js --progress --profile --bail"
   },
   "license": "MIT",
@@ -37,7 +38,7 @@
     "html-webpack-plugin": "^2.16.1",
     "jasmine": "~2.4.1",
     "jasmine-core": "^2.4.1",
-    "karma": "^1.2.0",
+    "karma": "^1.5.0",
     "karma-chrome-launcher": "^2.0.0",
     "karma-jasmine": "^1.0.2",
     "karma-sourcemap-loader": "^0.3.7",
