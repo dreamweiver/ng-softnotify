@@ -28,9 +28,10 @@ module.exports = function (config) {
     port: 9777,
     colors: true,
     logLevel: config.LOG_INFO,
-    autoWatch: false,
-    browsers: ['Chrome'],
-    singleRun: true
+    autoWatch: true,
+    browsers: ['PhantomJS'],
+    browserNoActivityTimeout: 100000,
+    singleRun: false
   };
 
   config.set(_config);
