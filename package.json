@@ -16,9 +16,7 @@
     "@angular/cli": "^8.0.3",
     "@angular/common": "~5.0.5",
     "@angular/compiler": "~5.0.0",
-    "@angular/core": "~5.0.5",
     "@angular/forms": "~5.0.5",
-    "@angular/http": "~5.0.5",
     "@angular/platform-browser": "~5.0.5",
     "@angular/platform-browser-dynamic": "~5.0.5",
     "@angular/router": "~5.0.5",
@@ -29,6 +27,8 @@
     "zone.js": "^0.8.4"
   },
   "devDependencies": {
+    "@angular/core": "^8.0.1",
+    "@angular/http": "^7.2.15",
     "@types/jasmine": "2.5.41",
     "@types/node": "^6.0.45",
     "angular2-template-loader": "^0.6.0",
