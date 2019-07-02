@@ -1,13 +1,13 @@
 {
   "name": "ng-SoftNotify",
   "version": "1.0.0",
-  "description": "Angular 5.0 Soft notification component",
+  "description": "Angular Soft notification component",
   "author": {
-    "name": "Manoj Kumar Lakshman",
+    "name": "dreamweiver",
     "email": "dreamweiver.manoj@gmail.com"
   },
   "scripts": {
-    "start": "webpack-dev-server --inline --progress --port 3980",
+    "start": "webpack-dev-server --inline --progress --port 3980 --open true",
     "test": "karma start karma.conf.js --single-run",
     "build": "rimraf dist && webpack --config config/webpack.prod.js --progress --profile --bail"
   },
@@ -30,7 +30,7 @@
     "rxjs-compat": "^6.0.0-rc.0"
   },
   "devDependencies": {
-    "@types/jasmine": "2.5.41",
+    "@types/jasmine": "^3.3.13",
     "@types/node": "^6.0.45",
     "angular2-template-loader": "^0.6.0",
     "awesome-typescript-loader": "^3.0.4",
@@ -53,7 +53,7 @@
     "raw-loader": "^0.5.1",
     "rimraf": "^2.5.2",
     "style-loader": "^0.13.1",
-    "typescript": "2.4.2",
+    "typescript": "~3.4.2",
     "webpack": "3.10.0",
     "webpack-dev-server": "2.9.7",
     "webpack-merge": "^3.0.0"

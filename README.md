@@ -1,6 +1,6 @@
 # Ng-SoftNotify
 
- Soft Notifications component developed using Angular 5.0 to show silent chat notification or alert notificataion to user on screen without disturbing the current operation on screen.
+ ng-softNotify is a generic notification component developed using Angular 8.0. The notifications can be a simple notification like an alert/warning/info or it may be something more intuitive like a chat notification.
 
 ### Live Example
 
@@ -17,17 +17,18 @@ npm install
 
 Main Features
 ----------------
-+    Silent Notifications on screen without distubing content
-+    Multiple alert notifications available via configuration (Success, Error, Warning, Info)
-+    Chat Notifications can also be generated with lovely avatars (Iron Man, captain america, Ninja turtle, etc.,)
-+    Auto dissmiss functionality with callback
-+    simple configuration
++    Easy & simple configurations.
++    Silent Notifications, notifications which wouldnt require any user attention.
++    Configurable Notifications types , currently supports (Success, Error, Warning, Info)
++    Intuitive Chat Notifications which come with predefined lovely avatars (Iron Man, captain america, Ninja turtle, etc.,)
++    Optional event handler to track the notifications after they are destroyed, mostly needed when working Chat notifications.  
+
 
 How to use Ng-SoftNotify?
 --------------------
 
 ### Importing the SoftNotifyModule ###
-Import SoftNotifyModule in your app's module by placinng it in `imports` array.
+Import SoftNotifyModule in your app's module by placing it in `imports` array.
 ```html
  import { SoftNotifyModule } from './softNotify/softNotify.module';
 
@@ -40,7 +41,7 @@ Import SoftNotifyModule in your app's module by placinng it in `imports` array.
 ```
 
 ### Launching Notification/Alert ###
-Use `<ng-softnotify>` element in your target html template and pass a callback to subscribe for `onDismissNotification` event.
+Use `<ng-softnotify>` element in your target html template and pass a callback to subscribe for `onDismissNotification` event (optional).
 
 ```html
 <ng-softnotify (onDismiss)="onDismissNotification($event)"></ng-softnotify>
@@ -86,6 +87,23 @@ this.softNotifyService.launchNotification(this.notifications[0]); //lauching the
 + Theatre Mask (theatre-mask)
 + Martian (martian)
 + Predator (predator)
+
+Developer ? Need to customise or extend the ng-softNotify in the code level ?
+--------------------
+
+After making respective code changes, open the terminal (go to root folder) and run following webpack build command
+
+```
+npm run build
+```
+
+After succesfully building application , run following command to host the app over dev-server
+
+```
+npm run start
+```
+
+*Update the respective `webpack.[dev/test].js` config file name under teh root `webpack.config.js`. By default `webpack.dev.js` hosts the app over webpack dev-server*
 
 ## Contributing
 
