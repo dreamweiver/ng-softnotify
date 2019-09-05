@@ -1,0 +1,15 @@
+import * as tslib_1 from "tslib";
+import { Injectable } from '@angular/core';
+let SoftNotifyService = class SoftNotifyService {
+    constructor() {
+        this.notifications = [];
+    }
+    launchNotification(notification) {
+        this.notifications.push(notification);
+    }
+};
+SoftNotifyService = tslib_1.__decorate([
+    Injectable()
+], SoftNotifyService);
+export { SoftNotifyService };
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoic29mdE5vdGlmeS5zZXJ2aWNlLmpzIiwic291cmNlUm9vdCI6Im5nOi8vbmctc29mdG5vdGlmeS8iLCJzb3VyY2VzIjpbImFwcC9zZXJ2aWNlcy9zb2Z0Tm90aWZ5LnNlcnZpY2UudHMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IjtBQUFBLE9BQU8sRUFBRSxVQUFVLEVBQUUsTUFBTSxlQUFlLENBQUM7QUFJM0MsSUFBYSxpQkFBaUIsR0FBOUIsTUFBYSxpQkFBaUI7SUFEOUI7UUFFRSxrQkFBYSxHQUFtQixFQUFFLENBQUM7SUFNcEMsQ0FBQztJQUpBLGtCQUFrQixDQUFDLFlBQTBCO1FBQzNDLElBQUksQ0FBQyxhQUFhLENBQUMsSUFBSSxDQUFDLFlBQVksQ0FBQyxDQUFDO0lBQ3hDLENBQUM7Q0FFRCxDQUFBO0FBUFcsaUJBQWlCO0lBRDdCLFVBQVUsRUFBRTtHQUNBLGlCQUFpQixDQU81QjtTQVBXLGlCQUFpQiIsInNvdXJjZXNDb250ZW50IjpbImltcG9ydCB7IEluamVjdGFibGUgfSBmcm9tICdAYW5ndWxhci9jb3JlJztcclxuaW1wb3J0ICB7Tm90aWZpY2F0aW9ufSBmcm9tICcuLy4uL2ludGVyZmFjZXMvbm90aWZpY2F0aW9uLmludGVyZmFjZSc7XHJcbiBcclxuQEluamVjdGFibGUoKVxyXG5leHBvcnQgY2xhc3MgU29mdE5vdGlmeVNlcnZpY2Uge1xyXG4gIG5vdGlmaWNhdGlvbnM6IE5vdGlmaWNhdGlvbltdID0gW107XHJcbiBcclxuICBsYXVuY2hOb3RpZmljYXRpb24obm90aWZpY2F0aW9uOiBOb3RpZmljYXRpb24pIHtcclxuICAgIHRoaXMubm90aWZpY2F0aW9ucy5wdXNoKG5vdGlmaWNhdGlvbik7XHJcbiAgfVxyXG4gIFxyXG4gfSJdfQ==

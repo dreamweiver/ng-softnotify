@@ -1,0 +1,34 @@
+<main>
+ <div class="notification-cont" [ngClass]="getFlowClass()">
+  <ng-container *ngFor="let notification of softNotifyService.notifications; last as islast">
+    <div class="notification repeated-item" *ngIf = "!notification.__isExpired">
+      <ng-container *ngIf="notification.type === 'chat'">  
+        <div class="notification-header" [ngClass]="notification.status" (onInitNotification)="onInit(notification)" >
+          <div class="header-content" >
+            <img class="notification-icon" [src]="'https://raw.githubusercontent.com/dreamweiver/ng-softnotify/master/src/assets/images/'+ notification.avatar +'.svg?sanitize=true'" >
+         
+
+            <span class="header-txt">{{notification.header}}</span>
+            <span class="sub-txt">{{notification.subHeader}}</span>
+            <span class="close-icon" (click)="onDismissNotification(notification)"> <img src="https://raw.githubusercontent.com/dreamweiver/ng-softnotify/master/src/assets/images/close.svg?sanitize=true"></span>
+          </div>
+        </div>
+        <div class="notification-body cont-chat">
+          <div class="body-content">
+            <span>{{notification.body}}</span>
+            <div><span class="time-val">{{notification.time}}</span></div>
+          </div>
+        </div>
+      </ng-container>
+      <ng-container *ngIf="notification.type !== 'chat'" >
+          <div class="notification_type cont-{{notification.type}}" [ngClass]="notification.type"></div>
+          <div class="notification_body cont-{{notification.type}}">
+            <div class="notification_title" [ngClass]="notification.type">{{notification.header}}</div>
+            <div class="notification_desc">{{notification.body}}</div>    
+          </div>
+          <div class="notification_ctrls cont-{{notification.type}}"><span class="close-icon" (click)="onDismissNotification(notification)"> <img src="https://raw.githubusercontent.com/dreamweiver/ng-softnotify/master/src/assets/images/close.svg?sanitize=true"></span></div>  
+      </ng-container>
+    </div>
+  </ng-container>
+  </div>
+</main>
