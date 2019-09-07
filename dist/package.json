@@ -7,15 +7,6 @@
     "@angular/core": "^8.0.0",
     "@angular/compiler": "^8.0.0"
   },
-  "scripts": {
-    "ng": "ng",
-    "start": "ng serve",
-    "build": "ng build",
-    "test": "ng test",
-    "lint": "ng lint",
-    "e2e": "ng e2e",
-    "packagr": "ng-packagr -p ng-package.json"
-  },
   "devDependencies": {
     "@angular/common": "^8.0.0",
     "@angular/core": "^8.0.0",
@@ -55,5 +46,18 @@
     "name": "Manoj Kumar Lakshman",
     "email": "dreamweiver.manoj@gmail.com"
   },
-  "license": "MIT"
+  "license": "MIT",
+  "main": "bundles/ng-softnotify.umd.js",
+  "module": "fesm5/ng-softnotify.js",
+  "es2015": "fesm2015/ng-softnotify.js",
+  "esm5": "esm5/ng-softnotify.js",
+  "esm2015": "esm2015/ng-softnotify.js",
+  "fesm5": "fesm5/ng-softnotify.js",
+  "fesm2015": "fesm2015/ng-softnotify.js",
+  "typings": "ng-softnotify.d.ts",
+  "metadata": "ng-softnotify.metadata.json",
+  "sideEffects": false,
+  "dependencies": {
+    "tslib": "^1.9.0"
+  }
 }
