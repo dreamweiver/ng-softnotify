@@ -12,7 +12,7 @@ click here [Ng-SoftNotify](https://dreamweiver.github.io/ng-softnotify/dist/inde
 Run the below npm command to install ng-softnotify & its dependencies to your project
 
 ```
-npm install ng-softnotify_dist/ng-softnotify-0.0.1.tgz
+npm install ng-softnotify
 ```
 
 Main Features
