@@ -104,15 +104,15 @@ this.softNotifyService.launchNotification(this.notifications[0]); //launching th
 ```
 
 ### Cool avatars available for Chat Notification (use code) ###
-+ Iron Man (iron-man)
-+ Captain America (captain-america)
-+ Scream (scream)
-+ Ninja Turle (ninja-turtle)
-+ Astronaut (astronaut)
-+ Alien (alien)
-+ Theatre Mask (theatre-mask)
-+ Martian (martian)
-+ Predator (predator)
++ Iron Man (iron-man) <img alt="iron_man" src="https://raw.githubusercontent.com/dreamweiver/ng-softnotify/master/src/assets/images/iron-man.svg?sanitize=true" width="25" height="25">
++ Captain America (captain-america) <img alt="iron_man" src="https://raw.githubusercontent.com/dreamweiver/ng-softnotify/master/src/assets/images/captain-america.svg?sanitize=true" width="25" height="25">
++ Scream (scream) <img alt="iron_man" src="https://raw.githubusercontent.com/dreamweiver/ng-softnotify/master/src/assets/images/scream.svg?sanitize=true" width="25" height="25">
++ Ninja Turle (ninja-turtle) <img alt="iron_man" src="https://raw.githubusercontent.com/dreamweiver/ng-softnotify/master/src/assets/images/ninja-turtle.svg?sanitize=true" width="25" height="25">
++ Astronaut (astronaut) <img alt="iron_man" src="https://raw.githubusercontent.com/dreamweiver/ng-softnotify/master/src/assets/images/astronaut.svg?sanitize=true" width="25" height="25">
++ Alien (alien) <img alt="iron_man" src="https://raw.githubusercontent.com/dreamweiver/ng-softnotify/master/src/assets/images/alien.svg?sanitize=true" width="25" height="25">
++ Theatre Mask (theatre-mask) <img alt="iron_man" src="https://raw.githubusercontent.com/dreamweiver/ng-softnotify/master/src/assets/images/theatre-mask.svg?sanitize=true" width="25" height="25">
++ Martian (martian) <img alt="iron_man" src="https://raw.githubusercontent.com/dreamweiver/ng-softnotify/master/src/assets/images/martian.svg?sanitize=true" width="25" height="25">
++ Predator (predator) <img alt="iron_man" src="https://raw.githubusercontent.com/dreamweiver/ng-softnotify/master/src/assets/images/predator.svg?sanitize=true" width="25" height="25">
 
 ## Contributing
 
