@@ -6,6 +6,7 @@ export declare class SoftNotifyComponent {
     constructor(softNotifyService: SoftNotifyService);
     onDismiss: EventEmitter<Notification>;
     direction: string;
+    animationType: string;
     /**
     Sample Alert Notification object structure
     notification = {
