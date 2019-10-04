@@ -12,7 +12,7 @@
 Run the below npm command to install ng-softnotify & its dependencies to your project
 
 ```
-npm install ../ng-softnotify/dist/ng-softnotify-0.0.1.tgz
+npm install ng-softnotify
 ```
 
 Main Features
