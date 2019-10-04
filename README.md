@@ -1,4 +1,4 @@
-# Ng-SoftNotify
+# Ng-SoftNotify &middot; [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)][![npm version](https://badge.fury.io/js/ng-softnotify.svg)](https://badge.fury.io/js/ng-softnotify)
 
  ng-softNotify is a generic notification component powered by Angular 2.0+. The notifications can be a simple notification like an alert,warning,info or it might be something more intuitive like a chat notification containing subject, msg-body, timestamp, online/offline status etc.,
 
