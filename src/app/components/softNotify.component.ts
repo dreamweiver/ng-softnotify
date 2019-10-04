@@ -1,7 +1,9 @@
 import { Component, Input, Output, EventEmitter} from '@angular/core';
 import { Notification } from './../interfaces/notification.interface';
-
 import { SoftNotifyService } from './../services/softNotify.service';
+import { trigger, state, style, animate, transition } from '@angular/animations';
+import { bounceInAndOut, enterAndLeaveFromLeft, enterAndLeaveFromRight, fadeInAndOut,
+  fadeInThenOut, growInShrinkOut, swingInAndOut } from './../common/triggers';
 
 declare var require: any;
 
@@ -12,7 +14,39 @@ declare var require: any;
   providers : [], // Component providers always supersede NgModule providers.
              // When the component or any of its sub-components inject X, 
              // they get the component service instance, not the NgModule service instance.
-
+  animations: [
+    // trigger(
+    //   'enterAnimation', [
+    //     transition(':enter', [
+    //       style({transform: 'translateX(100%)', opacity: 0}),
+    //       animate('500ms', style({transform: 'translateX(0)', opacity: 1}))
+    //     ]),
+    //     transition(':leave', [
+    //       style({transform: 'translateX(0)', opacity: 1}),
+    //       animate('500ms', style({transform: 'translateX(100%)', opacity: 0}))
+    //     ])
+    //   ]
+    // )
+     // trigger('shrinkOut', [
+     //    state('in', style({ height: '*' })),
+     //    transition('* => void', [
+     //      style({ height: '*' }),
+     //      animate(500, style({ height: 0 }))
+     //    ])
+     //  ])
+    //  trigger('fadeIn', [
+    //   transition(':enter', [
+    //     style({ opacity: '0' }),
+    //     animate('.5s ease-out', style({ opacity: '1' })),
+    //   ]),
+    // ])
+    // trigger('bounceInAndOut', [
+    //   transition(':enter', useAnimation(animations.bounceInUp)),
+    //   transition(':leave', useAnimation(animations.bounceOutDown)),
+    // ]),
+    growInShrinkOut, fadeInThenOut, swingInAndOut, fadeInAndOut,
+    enterAndLeaveFromLeft, enterAndLeaveFromRight, bounceInAndOut,
+  ],
   templateUrl: './softNotify.component.html', // template for Soft Notify Component
   
   styleUrls: ['./softNotify.component.css'] // Soft Notify Component specific stylesheet
@@ -24,6 +58,8 @@ export class SoftNotifyComponent {
   @Output() onDismiss = new EventEmitter<Notification>();
 
   @Input() direction: string;
+
+  @Input() animationType: string;
   
     /**
     Sample Alert Notification object structure
@@ -53,14 +89,18 @@ export class SoftNotifyComponent {
     //OnDismiss event triggered when Notification is dismissed(manually or autoDismissed)
     onDismissNotification = (notification :Notification) => {
       notification.__isExpired = true;
+
       if(this.onDismiss) { 
         this.onDismiss.emit(notification);  //Notify subscriber with dismissed Notification object
       }
+
+      this.softNotifyService.deleteNotification(notification);
     };
 
     // Initialise the Notification object with timer(if Auto Dimiss configured)    
     onInit = (notification :Notification) => {
         notification.__isExpired = false; // flag to filter out expired notifications
+        notification.__uniqueId = new Date().valueOf();
         if(notification.autoDismiss) {
            let interval = notification.autoDismiss;
             setTimeout(() => {  

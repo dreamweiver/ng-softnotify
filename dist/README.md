@@ -1,6 +1,6 @@
 # Ng-SoftNotify
 
- ng-softNotify is a generic notification component powered by Angular 2.0+. The notifications can be a simple notification like an alert,warning,info or it might be something more intuitive like a chat notification containing subject, msg-body, timestamp, online/offline status etc.,
+ ng-softNotify is a generic notification component powered by Angular 2.0+. The notifications can be a simple notification like an alert,warning,info or it might be something more intuitive like a chat notification with timestamp, online/offline status etc.,
 
 ### Live Example
 
@@ -9,26 +9,25 @@
 
 ### Installing
 
-Run the below npm command to install ng-softnotify & its dependencies to your project
+Run the below npm command to install ng-softnotify & its dependencies to your project npm repository 
 
 ```
-npm install ../ng-softnotify/dist/ng-softnotify-0.0.1.tgz
+npm install ng-softnotify
 ```
 
 Main Features
 ----------------
 +    Easy & simple configurations.
 +    Silent Notifications, notifications which wouldnt require any user attention.
-+    Configurable Alert notifications, currently supports (Success, Error, Warning, Info)
++    Configurable Notifications types , currently supports (Success, Error, Warning, Info)
 +    Intuitive Chat Notifications which come with predefined lovely avatars (Iron Man, captain america, Ninja turtle, etc.,)
-+    Notifications can be placed on left of right side of the screen. default is right.
-+    Optional event handler to track the notifications when removed from view, mostly needed when working with Chat notifications. 
++    Optional event handler to track the notifications after they are destroyed, mostly needed when working Chat notifications.  
 
 
 How to use Ng-SoftNotify?
 --------------------
 ### Prerequisites ###
-**ng-softnotify** uses angular animations for showcasing the notifications on screen, so install & import the `BrowserAnimationsModule` in your applications root module.
+**ng-softnotify** used angular animations for showcasing the notifications on screen, so install & import the `BrowserAnimationsModule` in your applications root module.
 ```
 npm install @angular/platform-browser/animations
 ```
@@ -47,7 +46,6 @@ npm install @angular/platform-browser/animations
 
 ### Importing the SoftNotifyModule ###
 Import SoftNotifyModule in your appllications root module.
-
 ```html
  import {SoftNotifyModule} from 'ng-softnotify';
 
@@ -60,7 +58,7 @@ Import SoftNotifyModule in your appllications root module.
 ```
 
 ### Launching Notification/Alert ###
-Use `<ng-softnotify>` element in your html template & pass following optional attribute values (this remains as global settings for all notifications displayed within this view or instance)
+Use `<ng-softnotify>` element in your html template pass following optional attribute values (global settings for all notifications)
 
 + Direction [input] *optional* : Flow direction to showcase the notifications, possible values are `left-top`, `right-top` (default value).
 
@@ -74,7 +72,6 @@ Use `<ng-softnotify>` element in your html template & pass following optional at
 
 
 Import `SoftNotifyService`  from `SoftNotifyModule` and call `launchNotification` with appropriate `Notification` object(Alert notification or Chat notification).
-Refer to Avatars list(shown below) for various avatars and its code, which has to be passed as value for `avatar` property.
 
 
 ```html
@@ -98,7 +95,7 @@ Refer to Avatars list(shown below) for various avatars and its code, which has t
           autoDismiss:50 //optional property
         }];
 
-this.softNotifyService.launchNotification(this.notifications[0]); //launching the notification
+this.softNotifyService.launchNotification(this.notifications[0]); //lauching the notification
 
 
 ```
@@ -113,6 +110,23 @@ this.softNotifyService.launchNotification(this.notifications[0]); //launching th
 + Theatre Mask (theatre-mask)
 + Martian (martian)
 + Predator (predator)
+
+Developer ? Need to customise or extend the ng-softNotify in the code level ?
+--------------------
+
+After making respective code changes, open the terminal (go to root folder) and run following webpack build command
+
+```
+npm run build
+```
+
+After succesfully building application , run following command to host the app over dev-server
+
+```
+npm run start
+```
+
+*Update the respective `webpack.[dev/test].js` config file name under teh root `webpack.config.js`. By default `webpack.dev.js` hosts the app over webpack dev-server*
 
 ## Contributing
 

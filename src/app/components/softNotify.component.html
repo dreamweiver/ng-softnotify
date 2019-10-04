@@ -1,7 +1,7 @@
 <main>
  <div class="notification-cont" [ngClass]="getFlowClass()">
-  <ng-container *ngFor="let notification of softNotifyService.notifications; last as islast">
-    <div class="notification repeated-item" *ngIf = "!notification.__isExpired">
+  <div *ngFor="let notification of softNotifyService.notifications; last as islast" [@bounceInAndOut]>
+    <div class="notification repeated-item"  *ngIf = "!notification.__isExpired"  >
       <ng-container *ngIf="notification.type === 'chat'">  
         <div class="notification-header" [ngClass]="notification.status" (onInitNotification)="onInit(notification)" >
           <div class="header-content" >
@@ -29,6 +29,6 @@
           <div class="notification_ctrls cont-{{notification.type}}"><span class="close-icon" (click)="onDismissNotification(notification)"> <img src="https://raw.githubusercontent.com/dreamweiver/ng-softnotify/master/src/assets/images/close.svg?sanitize=true"></span></div>  
       </ng-container>
     </div>
-  </ng-container>
+  </div>
   </div>
 </main>
