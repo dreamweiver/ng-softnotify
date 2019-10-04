@@ -1,2 +1,2 @@
-/node_modules/
-/ng-SoftNotify.txt
+# Node
+node_modules/*

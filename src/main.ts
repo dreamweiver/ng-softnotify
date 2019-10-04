@@ -1,17 +1,16 @@
-import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
+import './polyfills';
+
 import { enableProdMode } from '@angular/core';
+import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
 
 import { AppModule } from './app/app.module';
 
-declare var process:any;
+platformBrowserDynamic().bootstrapModule(AppModule).then(ref => {
+  // Ensure Angular destroys itself on hot reloads.
+  if (window['ngRef']) {
+    window['ngRef'].destroy();
+  }
+  window['ngRef'] = ref;
 
-if (process.env.ENV === 'production') {
-  enableProdMode();
-}
-
-// Bootstrapping the "AppModule" to index.html
-// The bootstrapping process sets up the execution environment, 
-// digs the root "AppComponent" out of the module's bootstrap array,
-// creates an instance of the component and inserts it within the element tag
-// identified by the component's selector.
-platformBrowserDynamic().bootstrapModule(AppModule); 
+  // Otherwise, log the boot error
+}).catch(err => console.error(err));

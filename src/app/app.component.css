@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css?family=Bungee');
+@import url('https://fonts.googleapis.com/css?family=Itim');
+
+main {
+	padding: 0 10px;
+	background-color: #000;
+}
+
+.float {
+	color: #fff;
+}
+
+.float .title{
+	position:absolute;
+	top: 350px;
+}
+
+.app_name {
+	font-size:50px;
+	font-family: 'Bungee', cursive;
+}
+
+.app_tag {
+	font-size:20px;
+	font-family: 'Itim', cursive;
+	float:right;
+	margin-top:-40px;
+}
+
+.float img {
+	position:absolute;
+	top:150px;
+}
