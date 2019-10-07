@@ -9,10 +9,14 @@
 
 ### Installing
 
-Run the below npm command to install ng-softnotify & its dependencies to your project
+Run the below npm or yarn command to install ng-softnotify & its dependencies to your project
 
 ```
 npm install ng-softnotify
+```
+
+```
+yarn add ng-softnotify
 ```
 
 Main Features
@@ -121,6 +125,8 @@ Please read [CONTRIBUTING.md](https://github.com/dreamweiver/ng-softnotify/blob/
 ## Versioning
 
 We use [SemVer](http://semver.org/) for versioning. 
+
+ChangeLog is available [here](https://github.com/dreamweiver/ng-softnotify/blob/master/CHANGELOG.md) . 
 
 ## Authors
 
